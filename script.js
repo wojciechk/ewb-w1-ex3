@@ -3,11 +3,8 @@
     
     var subMenu=$("#my-submenu");
     var hbg = $("#my-hamburger");
+    var dropMenu=$("#dropdown-menu")
     hbg.on("click", function (e) {
-        e.preventDefault();        
-        // subMenu.toggleClass("open");
-        $(".dropdown-menu").animate({
-             display:"block"
-         });
+        $(this).next('.dropdown-menu').slideToggle(500);
     });
 })(jQuery);
